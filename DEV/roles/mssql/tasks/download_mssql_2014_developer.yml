@@ -1,0 +1,6 @@
+---
+- name: Download MS SQL 2014 Developer Version from Microsoft Site
+  win_get_url:
+    url: "{{ sql_dev_2014 }}"
+    dest: "{{ data_folder }}/en_sql_server_2014_developer_edition.iso"
+    force: no

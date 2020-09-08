@@ -1,0 +1,6 @@
+---
+- name: create a directory
+  win_file:
+    path: "{{ data_folder }}"
+    state: directory
+

@@ -1,0 +1,5 @@
+---
+- name: Remove sql Configuration file from the location
+  win_file:
+    path: "{{ data_folder }}/mssql_dev_configuration.ini"
+    state: absent

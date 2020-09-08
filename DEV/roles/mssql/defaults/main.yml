@@ -1,0 +1,39 @@
+---
+# defaults file for mssql
+data_folder: 'c:\temporary'
+exp_adv: 'SQLEXPRADV_x64_ENU'    #c:\temporary\SQLEXPRADV_x64_ENU'
+
+
+# Download links may change. At the time of working below download links are working
+
+sql_dev_2014: 'https://download.my.visualstudio.com/sg/en_sql_server_2014_developer_edition_x64_dvd_3940406.iso?t=83a8fede-8cf2-440c-a6cc-d5b40007d5b3&e=1598476489&h=c8451b6cd4339637f46e887545060ab7&su=1'
+sql_dev_2016: 'https://download.my.visualstudio.com/sg/en_sql_server_2016_developer_x64_dvd_8777069.iso?t=c06c000b-dbcb-4b47-b063-ca1356937201&e=1598475122&h=e830d2b6a357103e7b7f72b57c73f9d2&su=1'
+sql_dev_2017: 'https://download.my.visualstudio.com/sg/en_sql_server_2017_developer_x64_dvd_11296168.iso?t=37e27783-3df2-4fa3-bbfd-14aee33698b7&e=1598565279&h=0745d22dd55efadce3a9ef6a5d813f56&su=1'
+sql_dev_2019: 'https://download.my.visualstudio.com/sg/en_sql_server_2019_developer_x64_dvd_baea4195.iso?t=95a2a4f7-c1d3-4a61-96b1-f26a54fb04bb&e=1598565587&h=f8da2c09cf85677ca781b9ac5961cb7f&su=1'
+
+productid_2014: '83a8fede-8cf2-440c-a6cc-d5b40007d5b3'
+productid_2016: 'c06c000b-dbcb-4b47-b063-ca1356937201'
+productid_2017: '37e27783-3df2-4fa3-bbfd-14aee33698b7'
+productid_2019: '95a2a4f7-c1d3-4ai61-96b1-f26a54fb04bb'
+
+
+iso_path: '{{ data_folder }}\en_sql_server_2019_developer_edition.iso'
+
+
+instancename: 'MSSQLSERVER'             # Instanceid
+agtsvcaccount: 'NT Service\SQLSERVERAGENT'
+sqlcollation: 'SQL_Latin1_General_CP1_CI_AS'
+sqlsvcaccount: 'NT Service\MSSQLSERVER'
+sqlsvcpassword: 'A123a123'
+sqlsysadminaccounts: 'ADMINISTRATOR'
+sapwd: 'Sa#1234'
+ftsvcaccount: 'NT Service\MSSQLFDLauncher'
+install_dir: 'C:\Program Files\Microsoft SQL Server'
+install_sharedwow_dir: 'C:\Program Files (x86)\Microsoft SQL Server'
+sql_backup_path: 'F:\MSSQL\Backup'
+sql_user_databases: 'D:\MSSQL\DATA'
+sql_tempdb: 'E:\MSSQL\TempDB'
+
+
+# SQL Download URL will be changing so need to get the proper URL from the below link beofre downloading via ansible
+# https://my.visualstudio.com/Downloads?q=sql%20server

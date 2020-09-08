@@ -1,0 +1,6 @@
+---
+- name: Download latest SSMS from from Microsoft Site
+  win_get_url:
+    url: https://download.microsoft.com/download/d/9/7/d9789173-aaa7-4f5b-91b0-a2a01f4ba3a6/SSMS-Setup-ENU.exe
+    dest: "{{ data_folder }}/SSMS-Setup-ENU.exe"
+    force: no

@@ -1,0 +1,11 @@
+---
+- name: installing SSMS using ansible
+  win_package:
+    path: C:\temporary\SSMS-Setup-ENU.exe
+    product_id: '{d9789173-aaa7-4f5b-91b0-a2a01f4ba3a6}'
+    arguments:
+    - /install
+    - /quiet
+    - /norestart
+    state: present
+    log_path: "{{ data_folder }}/ssms.log"

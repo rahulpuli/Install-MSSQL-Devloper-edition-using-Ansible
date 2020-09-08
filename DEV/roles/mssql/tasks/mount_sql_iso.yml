@@ -1,0 +1,9 @@
+---
+- name: Mount the SQL ISO Image
+  win_disk_image:
+    image_path: "{{ iso_path }}"
+    state: present
+  register: disk_image
+
+-  debug:
+    msg: "{{ disk_image }}"

@@ -1,0 +1,25 @@
+---
+# tasks file for mssql
+- include: createtemporaryfolder.yml
+- include: install_dotnet3.5.yml      
+- include: install_dotnet4.5.yml
+
+  #-------- MSSQL DEVELOPER ---------
+
+- include: download_mssql_2014_developer.yml
+#- include: download_mssql_2016_developer.yml
+#- include: download_mssql_2017_developer.yml 
+#- include: download_mssql_2019_developer.yml
+
+- include: mount_sql_iso.yml  
+
+- include: mssql_configuration_file.yml
+- include: run_mssql_setup.yml                      #Check the product_id  
+
+#--------- Download Latest SMS and install it  ----------------------
+- include: download_ssms.yml 
+- include: install_ssms.yml  
+
+#------------- Unmount and remove the configuration file-------------
+- include: unmount_sql_iso.yml
+- include: remove_mssql_configuration_file.yml

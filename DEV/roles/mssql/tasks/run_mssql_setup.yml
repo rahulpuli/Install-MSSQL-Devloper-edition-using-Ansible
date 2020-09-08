@@ -1,0 +1,6 @@
+---
+- name: mssql  Installation
+  win_package:
+     path: '{{ disk_image.mount_paths[0] }}\setup.exe'
+     product_id: '{ productid_2012 }'        #Need to change the product ID depends on the MSSQL setup version
+     arguments: '/IAcceptSQLServerLicenseTerms /q /ConfigurationFile={{ data_folder }}\mssql_dev_configuration.ini'

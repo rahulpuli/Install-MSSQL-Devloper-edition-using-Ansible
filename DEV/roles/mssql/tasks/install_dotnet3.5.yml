@@ -1,0 +1,11 @@
+---
+- name: A Pre-requisite of mssql .Net framework Core
+  win_feature:
+     name: NET-Framework-Core
+     state: present
+
+- name:  A Pre-requisite of mssql .Net framework 3.5
+  win_feature:
+     name: NET-Framework-Features
+     state: present
+     
